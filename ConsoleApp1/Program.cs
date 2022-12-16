@@ -10,26 +10,24 @@ namespace ConsoleApp1
 {
     class Threadtest
     {
-        public void threadthing(object intthing)
+        public int threadthing()
         {
             Random random = new Random();
-            for(int i = 1; i < 10; i++)
-            {
-                int thing = random.Next();
-                Console.WriteLine("step " + i + ". = " + thing);
-            }
+            int thing = random.Next();
+            return thing;
         }
     }
-
     internal class Program
     {
 
         static void Main(string[] args)
         {
-
-            Thread t = new Thread(threadthing);
+            Threadtest obj = new Threadtest();
+            Thread t = new Thread(obj.threadthing);
             Console.WriteLine("thread start");
-            t.Start(12);
+            for(int i = 1; i < 10; i++)
+            {
+            t.Start(i);
             Thread.Sleep(500);
             Console.WriteLine("thread pose 5s...");
             t.Suspend();
@@ -47,6 +45,7 @@ namespace ConsoleApp1
             t.Resume();
             Console.WriteLine("thread done");
             t.Abort();
+            }
 
         }
     }
