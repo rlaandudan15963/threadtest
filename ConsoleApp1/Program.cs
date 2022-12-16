@@ -14,7 +14,7 @@ namespace ConsoleApp1
         {
             Random random = new Random();
             int thing = random.Next();
-            return thing;
+            Console.Write(thing);
         }
     }
     internal class Program
@@ -23,7 +23,8 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Threadtest obj = new Threadtest();
-            Thread t = new Thread(obj.threadthing);
+            ThreadStart ts = new ThreadStart(obj.threadthing);
+            Thread t = new Thread(ts);
             Console.WriteLine("thread start");
             for(int i = 1; i < 10; i++)
             {
