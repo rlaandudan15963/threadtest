@@ -24,7 +24,9 @@ namespace ConsoleApp1
             Console.WriteLine("thread pose 5s...");
             t.Suspend();
             Thread.Sleep(100);
-            Console.WriteLine("1")
+            Console.WriteLine("1");
+            Console.WriteLine("2");
+
         }
     }
 }
