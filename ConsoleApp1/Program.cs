@@ -8,6 +8,10 @@ namespace ConsoleApp1
 {
     internal class Program
     {
+        static void threadthing(object intthing)
+        {
+            Random random = new Random();
+        }
         static void Main(string[] args)
         {
 
