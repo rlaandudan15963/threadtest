@@ -10,7 +10,7 @@ namespace ConsoleApp1
 {
     class Threadtest
     {
-        public int threadthing()
+        public void threadthing()
         {
             Random random = new Random();
             int thing = random.Next();
@@ -29,9 +29,7 @@ namespace ConsoleApp1
             for(int i = 1; i < 10; i++)
             {
             t.Start(i);
-            Thread.Sleep(500);
             Console.WriteLine("thread pose 5s...");
-            t.Suspend();
             Thread.Sleep(100);
             Console.WriteLine("1");
             Thread.Sleep(100);
@@ -43,7 +41,6 @@ namespace ConsoleApp1
             Thread.Sleep(100);
             Console.WriteLine("5");
             Console.WriteLine("thread continue");
-            t.Resume();
             Console.WriteLine("thread done");
             t.Abort();
             }
