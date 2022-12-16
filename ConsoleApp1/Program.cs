@@ -15,9 +15,9 @@ namespace ConsoleApp1
             Random random = new Random();
             for(int i = 0; i < 10; i++)
             {
-
+                int thing = random.Next();
+                Console.WriteLine("step 1. " + thing);
             }
-            Console.WriteLine((int)intthing * 2.5);
         }
         static void Main(string[] args)
         {
