@@ -13,23 +13,12 @@ namespace ConsoleApp1
         public void threadthing()
         {
             Random random = new Random();
-            int thing = random.Next();
-            Console.Write(thing);
-        }
-    }
-    internal class Program
-    {
-
-        static void Main(string[] args)
-        {
-            Threadtest obj = new Threadtest();
-            ThreadStart ts = new ThreadStart(obj.threadthing);
-            Thread t = new Thread(ts);
-            Console.WriteLine("thread start");
+            int thing = random.Next();      
             for(int i = 1; i < 10; i++)
             {
+                Console.WriteLine("thread start");
                 Console.Write("Step " + i + ". = ");
-            t.Start();
+                Console.Write(thing);
                 Console.WriteLine();
             Console.WriteLine("thread pose 5s...");
             Thread.Sleep(100);
@@ -44,9 +33,20 @@ namespace ConsoleApp1
             Console.WriteLine("5");
             Console.WriteLine("thread continue");
             Console.WriteLine("thread done");
-            t.Abort();
+                
             }
+        }
+    }
+    internal class Program
+    {
 
+        static void Main(string[] args)
+        {
+            Threadtest obj = new Threadtest();
+            ThreadStart ts = new ThreadStart(obj.threadthing);
+            Thread t = new Thread(ts);
+            t.Start();
+            t.Join();   
         }
     }
 }
