@@ -30,7 +30,7 @@ namespace ConsoleApp1
             {
                 Console.Write("Step " + i + ". = ");
             t.Start();
-
+                Console.WriteLine();
             Console.WriteLine("thread pose 5s...");
             Thread.Sleep(100);
             Console.WriteLine("1");
