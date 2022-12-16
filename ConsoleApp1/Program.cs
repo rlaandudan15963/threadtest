@@ -13,7 +13,10 @@ namespace ConsoleApp1
         static void threadthing(object intthing)
         {
             Random random = new Random();
+            for(int i = 0; i < 10; i++)
+            {
 
+            }
             Console.WriteLine((int)intthing * 2.5);
         }
         static void Main(string[] args)
