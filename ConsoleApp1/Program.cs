@@ -13,6 +13,7 @@ namespace ConsoleApp1
         static void threadthing(object intthing)
         {
             Random random = new Random();
+
             Console.WriteLine((int)intthing * 2.5);
         }
         static void Main(string[] args)
@@ -35,6 +36,8 @@ namespace ConsoleApp1
             Console.WriteLine("5");
             Console.WriteLine("thread continue");
             t.Resume();
+            Console.WriteLine("thread done");
+            t.Abort();
 
         }
     }
