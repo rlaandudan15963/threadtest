@@ -29,6 +29,8 @@ namespace ConsoleApp1
             Console.WriteLine("2");
             Thread.Sleep(100);
             Console.WriteLine("3");
+            Thread.Sleep(100);
+
         }
     }
 }
