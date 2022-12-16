@@ -28,7 +28,9 @@ namespace ConsoleApp1
             Console.WriteLine("thread start");
             for(int i = 1; i < 10; i++)
             {
-            t.Start(i);
+                Console.Write("Step " + i + ". = ");
+            t.Start();
+
             Console.WriteLine("thread pose 5s...");
             Thread.Sleep(100);
             Console.WriteLine("1");
