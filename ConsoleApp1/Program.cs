@@ -18,7 +18,9 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Thread t = new Thread(threadthing);
-            t.Start();
+            Console.WriteLine("thread start");
+            t.Start(12);
+            Thread.Sleep(500);
         }
     }
 }
