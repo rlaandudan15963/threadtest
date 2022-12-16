@@ -30,7 +30,9 @@ namespace ConsoleApp1
             Thread.Sleep(100);
             Console.WriteLine("3");
             Thread.Sleep(100);
-
+            Console.WriteLine("4");
+            Thread.Sleep(100);
+            Console.WriteLine("5");
         }
     }
 }
