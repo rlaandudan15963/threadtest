@@ -8,19 +8,25 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Program
+    class Threadtest
     {
-        static void threadthing(object intthing)
+        public void threadthing(object intthing)
         {
             Random random = new Random();
-            for(int i = 0; i < 10; i++)
+            for(int i = 1; i < 10; i++)
             {
                 int thing = random.Next();
-                Console.WriteLine("step 1. " + thing);
+                Console.WriteLine("step " + i + ". = " + thing);
             }
         }
+    }
+
+    internal class Program
+    {
+
         static void Main(string[] args)
         {
+
             Thread t = new Thread(threadthing);
             Console.WriteLine("thread start");
             t.Start(12);
